@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JSON_Database.iml" filepath="$PROJECT_DIR$/.idea/modules/JSON_Database.iml" group="JSON_Database" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JSON Database/task/JSON_Database-task.iml" filepath="$PROJECT_DIR$/.idea/modules/JSON Database/task/JSON_Database-task.iml" group="JSON_Database/JSON_Database-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JSON Database/task/JSON_Database-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JSON Database/task/JSON_Database-task_main.iml" group="JSON_Database/JSON_Database-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JSON Database/task/JSON_Database-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JSON Database/task/JSON_Database-task_test.iml" group="JSON_Database/JSON_Database-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="JSON_Database/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="JSON_Database/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="JSON_Database/util" />
+    </modules>
+  </component>
+</project>

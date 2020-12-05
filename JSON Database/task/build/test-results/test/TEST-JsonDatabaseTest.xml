@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-05T08:40:42" hostname="Brian.local" time="0.53">
+  <properties/>
+  <testcase name="start" classname="JsonDatabaseTest" time="0.53"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+Client started!
+Sent: {"type":"exit"}
+Received: {"response":"OK"}
+?[1;31m
+Start test 2?[0m
+Client started!
+Sent: {"type":"get","key":"1"}
+Received: {"reason":"No such key","response":"ERROR"}
+Client started!
+Sent: {"type":"set","value":"Hello world!","key":"1"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"set","value":"HelloWorld!","key":"1"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":"1"}
+Received: {"response":"OK","value":"HelloWorld!"}
+Client started!
+Sent: {"type":"delete","key":"1"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"delete","key":"1"}
+Received: {"reason":"No such key","response":"ERROR"}
+Client started!
+Sent: {"type":"get","key":"1"}
+Received: {"reason":"No such key","response":"ERROR"}
+Client started!
+Sent: {"type":"set","value":"Some text here","key":"text"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":"text"}
+Received: {"response":"OK","value":"Some text here"}
+Client started!
+Sent: {"type":"get","key":"56"}
+Received: {"reason":"No such key","response":"ERROR"}
+Client started!
+Sent: {"type":"delete","key":"56"}
+Received: {"reason":"No such key","response":"ERROR"}
+Client started!
+Sent: {"type":"delete","key":"100"}
+Received: {"reason":"No such key","response":"ERROR"}
+Client started!
+Sent: {"type":"delete","key":"That key doesn\u0027t exist"}
+Received: {"reason":"No such key","response":"ERROR"}
+Client started!
+Sent: {"type":"exit"}
+Received: {"response":"OK"}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
