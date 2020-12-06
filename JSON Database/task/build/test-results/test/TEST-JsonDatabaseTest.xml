@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-05T08:40:42" hostname="Brian.local" time="0.53">
+<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-06T13:55:52" hostname="Brian.local" time="0.774">
   <properties/>
-  <testcase name="start" classname="JsonDatabaseTest" time="0.53"/>
+  <testcase name="start" classname="JsonDatabaseTest" time="0.774"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
+?[1;31m
+Start test 2?[0m
 Client started!
 Sent: {"type":"exit"}
 Received: {"response":"OK"}
 ?[1;31m
-Start test 2?[0m
+Start test 3?[0m
 Client started!
 Sent: {"type":"get","key":"1"}
 Received: {"reason":"No such key","response":"ERROR"}
@@ -47,6 +49,18 @@ Sent: {"type":"delete","key":"100"}
 Received: {"reason":"No such key","response":"ERROR"}
 Client started!
 Sent: {"type":"delete","key":"That key doesn\u0027t exist"}
+Received: {"reason":"No such key","response":"ERROR"}
+Client started!
+Sent: {"type":"set","value":"Kate","key":"name"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":"name"}
+Received: {"response":"OK","value":"Kate"}
+Client started!
+Sent: {"type":"delete","key":"name"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":"name"}
 Received: {"reason":"No such key","response":"ERROR"}
 Client started!
 Sent: {"type":"exit"}

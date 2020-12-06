@@ -11,8 +11,7 @@ import java.util.Map;
 public class Args {
     @Parameter (
             names="-t",
-            description = "The type of the command",
-            required = true
+            description = "The type of the command"
     )
     public String type;
 
@@ -27,4 +26,9 @@ public class Args {
             description = "V is the value to set"
     )
     public String message;
+    @Parameter (
+            names="-in",
+            description = "The json input file"
+    )
+    public String jsonFile;
 }

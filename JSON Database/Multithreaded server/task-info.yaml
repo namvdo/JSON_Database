@@ -110,24 +110,6 @@ files:
         }
     }
   learner_created: false
-- name: src/server/Setup.java
-  visible: true
-  text: |
-    package server;
-
-    /**
-     * @author namvdo
-     */
-    public class Setup {
-        public static final int START = 1;
-        public static final int END = 1000;
-        public static final String DELIMITER = " ";
-        public static final String EXIT = "exit";
-        public static final String GET = "get";
-        public static final String SET = "set";
-        public static final String DELETE = "delete";
-    }
-  learner_created: false
 - name: src/client/Args.java
   visible: true
   text: |
@@ -755,6 +737,113 @@ files:
         }
     }
   learner_created: false
+- name: src/client/JsonObject.java
+  visible: true
+  text: |+
+    package client;
+
+    public class JsonObject {
+        private final String type;
+        private final String key;
+        private final String value;
+        private JsonObject(JsonObjectBuilder builder) {
+            this.type = builder.type;
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+        public static class JsonObjectBuilder {
+            private final String type;
+            private String key;
+            private String value;
+            public JsonObjectBuilder(String type) {
+                this.type = type;
+            }
+            public JsonObjectBuilder key(String key) {
+                this.key = key;
+                return this;
+            }
+            public JsonObjectBuilder value(String value) {
+                this.value = value;
+                return this;
+            }
+            public JsonObject build() {
+                return new JsonObject(this);
+            }
+        }
+        public static JsonObjectBuilder Builder(String type) {
+            return new JsonObjectBuilder(type);
+        }
+        public String getKey() {
+            return key;
+        }
+        public String getValue() {
+            return value;
+        }
+        public String getType() {
+            return type;
+        }
+    }
+
+  learner_created: true
+- name: src/server/ResponseObject.java
+  visible: true
+  text: |
+    package server;
+
+    public class ResponseObject {
+        private final String response;
+        private final String reason;
+
+
+        public ResponseObject(String response, String reason) {
+            this.response = response;
+            this.reason = reason;
+        }
+
+        public String getResponse() {
+            return response;
+        }
+
+        public String getReason() {
+            return reason;
+        }
+    }
+  learner_created: true
+- name: src/server/data/db.json
+  visible: true
+  learner_created: true
+- name: src/client/data/testGet.json
+  visible: true
+  learner_created: true
+- name: src/client/data/testDelete.json
+  visible: true
+  learner_created: true
+- name: src/client/data/testSet.json
+  visible: true
+  learner_created: true
+- name: src/server/CommandUtils.java
+  visible: true
+  text: |
+    package client;
+
+    public class CommandUtils {
+        public static final String SEND = "Sent";
+        public static final String RECEIVE = "Received";
+        public static final String RESPONSE_OK = "OK";
+        public static final String RESPONSE_ERROR = "ERROR";
+        public static final String RESPONSE_ERROR_REASON = "No such key";
+        public static final int START = 1;
+        public static final int END = 1000;
+        public static final String RESPONSE = "response";
+        public static final String VALUE = "value";
+        public static final String REASON = "reason";
+
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/65/stages/352/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/65/stages/352/implement">JetBrains
+    Academy</a>
+  time: Sun, 06 Dec 2020 13:55:53 UTC
 record: -1
