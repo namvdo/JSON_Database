@@ -1,9 +1,7 @@
 package client;
 
 import com.beust.jcommander.Parameter;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.google.gson.JsonObject;
 
 /**
  * @author namvdo

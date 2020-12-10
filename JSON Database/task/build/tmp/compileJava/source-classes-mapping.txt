@@ -1,16 +1,20 @@
 server/CommandUtils.java
  server.CommandUtils
+client/JsonCommand.java
+ client.JsonCommand
+ client.JsonCommand$JsonObjectBuilder
 client/Args.java
  client.Args
-server/ResponseObject.java
- server.ResponseObject
+server/ResponseUtil.java
+ server.ResponseUtil
+server/Main.java
+ server.Main
+server/Server.java
+ server.Server
+ server.ServerWorker
 server/JsonDatabase.java
  server.JsonDatabase
 client/Main.java
  client.Main
-client/JsonObject.java
- client.JsonObject
- client.JsonObject$JsonObjectBuilder
-server/Main.java
- server.Main
- server.SocketWorker
+client/Client.java
+ client.Client
