@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 public class JsonObject implements Serializable {
     private final String type;
     private final String key;
-    private final String value;
+    private final com.google.gson.JsonObject value;
 
     private JsonObject(JsonObjectBuilder builder) {
         this.type = builder.type;
@@ -22,7 +22,7 @@ public class JsonObject implements Serializable {
     public static class JsonObjectBuilder {
         private final String type;
         private String key;
-        private String value;
+        private com.google.gson.JsonObject value;
         public JsonObjectBuilder(String type) {
             this.type = type;
         }
@@ -30,7 +30,7 @@ public class JsonObject implements Serializable {
             this.key = key;
             return this;
         }
-        public JsonObjectBuilder value(String value) {
+        public JsonObjectBuilder value(com.google.gson.JsonObject value) {
             this.value = value;
             return this;
         }
@@ -45,7 +45,7 @@ public class JsonObject implements Serializable {
     public String getKey() {
         return key;
     }
-    public String getValue() {
+    public com.google.gson.JsonObject getValue() {
         return value;
     }
     public String getType() {
