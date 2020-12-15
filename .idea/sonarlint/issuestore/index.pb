@@ -23,3 +23,7 @@ _
 /JSON Database/task/src/server/ResponseUtil.java,7/d/7d69cf16991d99f18cb2e2a04e7032bcbdabccb0
 \
 ,JSON Database/task/src/server/data/data.json,4/7/47414abf56bdda0f351d8764b2aeadb8701d2619
+Y
+)JSON Database/task/src/server/Server.java,8/2/822493dfb1c077e9ec89947bddd42c19b1f13c3d
+Y
+)JSON Database/task/src/client/Client.java,7/2/72335473d95f65e849c644aefd2680f89478402e
