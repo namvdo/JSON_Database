@@ -24,6 +24,7 @@ public class Server {
                 (new ServerWorker(serverSocket, socket, jsonDatabase)).start();
             }
         } catch (Exception exception) {
+            exception.printStackTrace();
         }
     }
 
@@ -34,7 +35,8 @@ public class Server {
             while (!serverSocket.isClosed()) {
                 openSocket(serverSocket, jsonDatabase);
             }
-        } catch (IOException ignored) {
+        } catch (IOException exception) {
+            exception.printStackTrace();
         }
     }
 }
@@ -87,6 +89,7 @@ class ServerWorker extends Thread {
                     break;
             }
         } catch (IOException ioException) {
+            ioException.printStackTrace();
         }
     }
 }
